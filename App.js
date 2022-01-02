@@ -32,10 +32,6 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 //   TouchableHighlight,
 //   Dimensions,
 // } from "react-native";
-// import {
-//   backgroundColor,
-//   textDecorationColor,
-// } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 
 const categories = [
   { label: "furniture", value: 1 },
