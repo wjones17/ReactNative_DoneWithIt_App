@@ -11,6 +11,7 @@ import Screen from "./app/components/Screen";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import ListingScreen from "./app/screens/ListingScreen";
+import LoginScreen from "./app/screens/LoginScreen";
 import MessagesScreen from "./app/screens/MessagesScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
@@ -19,19 +20,8 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 //   useDeviceOrientation,
 // } from "@react-native-community/hooks";
 
-const categories = [
-  { label: "furniture", value: 1 },
-  { label: "Clothing", value: 2 },
-  { label: "cameras", value: 3 },
-];
-
 export default function App() {
-  return (
-    <Screen>
-      <AppPicker items={categories} icon="apps" placeholder={"Category"} />
-      <AppTextInput icon="email" placeholder="Email" />
-    </Screen>
-  );
+  return <LoginScreen />;
 }
 
 // (
