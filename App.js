@@ -18,20 +18,6 @@ import WelcomeScreen from "./app/screens/WelcomeScreen";
 //   useDimensions,
 //   useDeviceOrientation,
 // } from "@react-native-community/hooks";
-// import {
-//   SafeAreaView,
-//   StyleSheet,
-//   Text,
-//   View,
-//   Image,
-//   TouchableWithoutFeedback,
-//   Platform,
-//   StatusBar,
-//   Button,
-//   TouchableOpacity,
-//   TouchableHighlight,
-//   Dimensions,
-// } from "react-native";
 
 const categories = [
   { label: "furniture", value: 1 },
