@@ -11,7 +11,8 @@ const initialMessages = [
   {
     id: 1,
     title: "T1",
-    description: "D1",
+    description:
+      "Hello my name is tommy bommy, I want to make some sandwiches on the beach and eat a bunch of butter with them while i eat butter. ",
     image: require("../assets/mosh.jpg"),
   },
   {

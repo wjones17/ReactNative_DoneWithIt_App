@@ -3,6 +3,7 @@ import { Text, TextInput, View } from "react-native";
 import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
 import AppButton from "./app/components/AppButton";
 import AppPicker from "./app/components/AppPicker";
+import AppText from "./app/components/AppText";
 import AppTextInput from "./app/components/AppTextInput";
 import Card from "./app/components/Card";
 import AppFormPicker from "./app/components/forms/AppFormPicker";

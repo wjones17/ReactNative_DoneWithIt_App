@@ -15,7 +15,15 @@ import AppText from "./AppText";
 
 import PickerItem from "./PickerItem";
 
-function AppPicker({ icon, placeholder, items, onSelectedItem, selectedItem }) {
+function AppPicker({
+  icon,
+  placeholder,
+  items,
+  onSelectedItem,
+  selectedItem,
+  numberOfColumns = 1,
+  PickerItemComponent = PickerItem,
+}) {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -30,10 +38,13 @@ function AppPicker({ icon, placeholder, items, onSelectedItem, selectedItem }) {
               style={styles.icon}
             />
           )}
+
           {selectedItem ? (
-            <AppText style={styles.text}>{selectedItem.label}</AppText>
+            <AppText style={styles.text}>{selectedItem.label} </AppText>
           ) : (
-            <AppText style={styles.placeholder}>{placeholder}</AppText>
+            <AppText style={[styles.text, { color: colors.grey }]}>
+              {placeholder}
+            </AppText>
           )}
 
           <MaterialCommunityIcons
@@ -49,9 +60,11 @@ function AppPicker({ icon, placeholder, items, onSelectedItem, selectedItem }) {
           <FlatList
             data={items}
             keyExtractor={(item) => item.value.toString()}
+            numColumns={numberOfColumns}
             renderItem={({ item }) => (
-              <PickerItem
+              <PickerItemComponent
                 label={item.label}
+                item={item}
                 onPress={() => {
                   setModalVisible(false);
                   onSelectedItem(item);

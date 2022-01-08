@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet } from "react-native";
 import * as Yup from "yup";
+import CategoryPickerItem from "../components/CategoryPickerItem";
 import {
   AppForm,
   AppFormField,
@@ -18,9 +19,35 @@ const validationSchema = Yup.object().shape({
 });
 
 const categories = [
-  { label: "Furniture", value: 1 },
-  { label: "Clothing", value: 2 },
-  { label: "Camera", value: 3 },
+  { label: "Furniture", value: 1, backgroundColor: "red", icon: "floor-lamp" },
+  { label: "Clothing", value: 2, backgroundColor: "green", icon: "shoe-heel" },
+  { label: "Camera", value: 3, backgroundColor: "orange", icon: "camera" },
+  { label: "Cars", value: 4, backgroundColor: "red", icon: "car" },
+  { label: "Games", value: 5, backgroundColor: "indigo", icon: "cards" },
+  {
+    label: "Sports",
+    value: 6,
+    backgroundColor: "blue",
+    icon: "basketball",
+  },
+  {
+    label: "Movies & music",
+    value: 7,
+    backgroundColor: "violet",
+    icon: "music",
+  },
+  {
+    label: "Books",
+    value: 8,
+    backgroundColor: "yellow",
+    icon: "book-open-variant",
+  },
+  {
+    label: "Other",
+    value: 9,
+    backgroundColor: "grey",
+    icon: "comment-question-outline",
+  },
 ];
 
 function ListingEditScreen(props) {
@@ -47,6 +74,8 @@ function ListingEditScreen(props) {
           items={categories}
           name="category"
           placeholder="Category"
+          PickerItemComponent={CategoryPickerItem}
+          numberOfColumns={3}
         />
         <AppFormField
           maxLength={255}
