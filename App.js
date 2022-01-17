@@ -1,14 +1,4 @@
-import React, { useState } from "react";
-import { Text, TextInput, View } from "react-native";
-import { backgroundColor } from "react-native/Libraries/Components/View/ReactNativeStyleAttributes";
-import AppButton from "./app/components/AppButton";
-import AppPicker from "./app/components/AppPicker";
-import AppText from "./app/components/AppText";
-import AppTextInput from "./app/components/AppTextInput";
-import Card from "./app/components/Card";
-import AppFormPicker from "./app/components/forms/AppFormPicker";
-import Icon from "./app/components/Icon";
-import ListItem from "./app/components/ListItem";
+import React, { useEffect, useState } from "react";
 import Screen from "./app/components/Screen";
 import AccountScreen from "./app/screens/AccountScreen";
 import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
@@ -19,31 +9,16 @@ import MessagesScreen from "./app/screens/MessagesScreen";
 import RegisterScreen from "./app/screens/RegisterScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomeScreen";
-// import {
-//   useDimensions,
-//   useDeviceOrientation,
-// } from "@react-native-community/hooks";
+import * as ImagePicker from "expo-image-picker";
+import { Button, Image } from "react-native";
+import ImageInput from "./app/components/ImageInput";
+import ImageInputList from "./app/components/ImageInputList";
 
 export default function App() {
   return <ListingEditScreen />;
 }
 
-// (
-//   <WelcomeScreen />
-// <View
-//   style={{
-//     flex: 1,
-//     justifyContent: "center",
-//     alignItems: "center",
-//   }}
-// >
-//   <AppButton title="login" onPress={() => console.log("Tapped")} />
-// </View>
-// );
-
-//   const TextPress = () => console.log("Text pressed");
-//   const ButtonPress = () => console.log("button pressed");
-//   const picturePress = () => console.log("picture pressed");
+//   ///PRACTICE AND NOTES ARE COMMENTED OUT
 
 //   // gets the dimensoons of the current device screen
 //   // console.log(useDimensions());
@@ -54,7 +29,6 @@ export default function App() {
 //   //Or could use object destructuring and pic the landscape property from it
 //   const { landscape } = useDeviceOrientation();
 
-//   ///PRACTICE AND NOTES ARE COMMENTED OUT
 //   // return (
 //   //   <SafeAreaView style={styles.container}>
 //   //     {/* sets an image from the assets folder of the project */}
